@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:practice_app/math_compute_bloc/math_compute_bloc.dart';
+import 'package:practice_app/math_compute_bloc/bloc/math_compute_bloc.dart';
 
 class MathComputeView extends StatelessWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:practice_app/practice_concepts_bloc/practice_concepts_bloc.dart';
+import 'package:practice_app/practice_concepts_bloc/bloc/practice_concepts_bloc.dart';
 
 class PracticeView extends StatelessWidget {
   @override
