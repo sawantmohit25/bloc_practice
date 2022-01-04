@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:practice_app/math_compute_bloc/math_compute_bloc.dart';
 
 class MathComputeView extends StatelessWidget {
-    int sum=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,14 +14,14 @@ class MathComputeView extends StatelessWidget {
         children: [
           FloatingActionButton(
             onPressed:(){
-              BlocProvider.of<MathComputeBloc>(context).add(IncrementEvent(sum));
+              BlocProvider.of<MathComputeBloc>(context).add(IncrementEvent());
             },
             child:Icon(Icons.add),
           ),
           SizedBox(width:5),
           FloatingActionButton(
             onPressed:(){
-              BlocProvider.of<MathComputeBloc>(context).add(DecrementEvent(sum));
+              BlocProvider.of<MathComputeBloc>(context).add(DecrementEvent());
             },
             child:Icon(Icons.remove),
           ),
@@ -33,6 +32,9 @@ class MathComputeView extends StatelessWidget {
         BlocBuilder<MathComputeBloc,MathComputeState>(
           builder: (context, state) {
             if(state is IncrementState){
+              return Text('The value is '+state.sum.toString());
+            }
+            else if(state is DecrementState){
               return Text('The value is '+state.sum.toString());
             }
             else{
